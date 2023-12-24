@@ -15,7 +15,137 @@
   }
 
 
+*****************************************************************************************************************************
 
-  2)
+
+2) https://www.codingninjas.com/studio/problems/reverse-of-a-number_624652
+
+reverse a number 
+
+#include<iostream>
+using namespace std;
+
+int main() {
+	// Write your code here
+	int n ;
+	cin>>n;
+	int revn=0;
+	int temp=n;
+	while(temp>0){
+		int last_digit =temp%10;
+		revn=revn*10+last_digit;
+		temp=temp/10;
+	}
+	cout<< revn;
+	
+}
+
+
+*****************************************************************************************************************************
+
+3) https://www.codingninjas.com/studio/problems/palindrome-number_624662?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
+
+check palindrome
+
+bool palindrome(int n)
+{
+    int revn=0;
+    int originaln=n;
+    while(n>0){
+        int ld=n%10;
+        revn=revn*10+ld;
+        n=n/10;
+    }
+    // if(revn==n) return true;
+    // else return false;
+
+    return(originaln==revn);
+    // Write your code here
+}
+
+https://leetcode.com/problems/palindrome-number/
+
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        // Handle negative numbers and numbers ending with 0
+        if (x < 0 || (x % 10 == 0 && x != 0)) {
+            return false;
+        }
+
+        int reversed = 0;
+        while (x > reversed) {
+            int lastDigit = x % 10;
+            reversed = reversed * 10 + lastDigit;
+            x /= 10;
+        }
+
+        // For odd-length palindromes, the middle digit can be ignored
+        return (x == reversed || x == reversed / 10);
+    }
+};
+
+*****************************************************************************************************************************
+
+
+4) https://www.codingninjas.com/studio/problems/check-armstrong_589?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
+
+check armstrrong
+
+bool checkArmstrong(int n){
+
+	// Write your code here
+	int originalo=n;
+	int count=0;
+	while(originalo!=0){
+
+		count++;
+		originalo=originalo/10;
+	}
+	int temp=n;
+	int sum=0;
+	while(temp!=0){
+		int ld=temp%10;
+		sum+=(int)pow(ld,count);
+		temp=temp/10;
+	}
+	return (sum==n);
+
+}
+
+*****************************************************************************************************************************
+
+
+5) print all divisors
+
+4:- 1,2,4
+
+#include <iostream>
+using namespace std;
+
+void printdivisors(int n) {
+    vector<int> ls;
+    for ( int i = 1;i < sqrt(n); i++){
+        if(n % i ==0) ls.push_back(i);
+        if(n/i!=i) ls.push_back(n/i);
+    }
+    sort(ls.begin(),ls.end());
+    for ( auto it : ls ) cout << it << " ";
+}
+
+int main() {
+    int n;
+    cin >> n;
+    printdivisors(n);
+    return 0;
+}
+
+
+
+*****************************************************************************************************************************
+
+
+6) 
+
 
   
