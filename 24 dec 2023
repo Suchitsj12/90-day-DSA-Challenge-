@@ -181,7 +181,40 @@ int main() {
 *****************************************************************************************************************************
 
 
-7) 
+7) finding gdc/hcf
+
+https://www.codingninjas.com/studio/problems/gcd_6557?utm_source=striver&utm_medium=website&utm_campaign=codestudio_a_zcourse&leftPanelTabValue=PROBLEM
+
+int gcd(int a,int b)
+{
+	//Write your code here
+	int gcd=1;
+	int minval=(a<b)?a:b;
+
+	for ( int i=1; i<=minval;i++){
+		if(a%i==0 && b%i==0){
+			gcd=i;
+		}
+	}
+	return gcd;
+
+}
+
+
+using ecludian algo: gcd(a,b) = gcd(a%b,b)
+
+int gcd(int a,int b)
+{
+	//Write your code here
+	while(a>0 && b>0){
+		if( a > b) a=a%b;
+		else b=b%a;
+	}
+	if(a==0) return b ;
+	else return a;
+
+}
+
 
 
 
