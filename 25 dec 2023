@@ -31,5 +31,86 @@ int main() {
     return 0;
 }
 
+*****************************************************************************************************************************
+
+2) hashing for string 
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    string s;
+    cin>>s;
+
+    //precompute
+    int hash[26]={0};
+    for(int i=0;i<s.size();i++){
+        hash[s[i]-'a']+=1;
+        
+    }
 
 
+
+    int q;
+    cin>>q;
+    while(q--){
+        char c;
+        cin>>c;
+        //fetch
+        cout<<has[c-'a']<<endl;
+
+    }
+
+    return 0;
+
+
+
+}
+
+
+*****************************************************************************************************************************
+
+
+3) hashing   with map
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <map>
+
+// Include other headers as needed
+
+using namespace std;
+
+int main(){
+    int n;
+    cin>>n;
+    int arr[n];
+    map<int,int> mpp;
+    for( int i=0; i<n;i++){
+        cin>>arr[i];
+        mpp[arr[i]]++;
+    }
+for (auto it:mpp){
+    // first for key and second for value 
+    cout<<it.first<<"->"<<it.second<<endl; 
+
+}
+
+    int q;
+    cin>>q;
+    while(q--){
+        int number;
+        cin>>number;
+        //fetch number 
+        cout<<mpp[number]<<endl;
+    }
+    return 0;
+}
+
+
+
+*****************************************************************************************************************************
+
+
+4) 
