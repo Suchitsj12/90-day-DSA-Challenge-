@@ -113,4 +113,48 @@ for (auto it:mpp){
 *****************************************************************************************************************************
 
 
-4) 
+4)   https://www.codingninjas.com/studio/problems/print-1-to-n_628290?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTabValue=SUBMISSION
+
+1 to N Without Loop
+
+vector<int> printNos(int n) {
+    // Write Your Code Here
+ // Base case: If n is 1, return a vector containing only 1
+    if (n == 1) {
+        return {1};
+    }
+
+    // // Recursive case: Call printNos with n-1 and append n to the result
+    // vector<int> result = printNos(n - 1);
+    // result.push_back(n);
+
+    // return result;
+
+    vector<int> result=printNos(n-1);
+    result.push_back(n);
+    return result;
+}
+
+
+*****************************************************************************************************************************
+
+
+5) https://www.codingninjas.com/studio/problems/-print-n-times_8380707?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTabValue=PROBLEM
+
+Print n times
+
+void printNTimes(int n) {
+	// Write your code here.
+	if(n==0) return ;
+	cout<<"Coding Ninjas"<<" ";
+	printNTimes(n-1);
+s
+}
+
+
+
+
+
+
+
+
