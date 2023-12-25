@@ -246,6 +246,84 @@ vector<int> reverseArray(int n, vector<int> &nums)
 *****************************************************************************************************************************
 
 10) 
+https://www.codingninjas.com/studio/problems/check-palindrome-recursive_624386?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTabValue=SUBMISSION
+
+
+check Palindrome
+
+bool isPalindrome(string& str) {
+    // Write your code here.
+
+      // Write your code here.
+
+  string temp = str;
+
+  int p1 = 0;
+
+  int p2 = str.size() - 1;
+
+  while (p1 < p2) {
+
+    swap(str[p1], str[p2]);
+
+    p1++;
+
+    p2--;
+
+  }
+
+  if (str == temp) {
+
+    return true;
+
+  } else {
+
+    return false;
+
+  }
+
+}
+
+*****************************************************************************************************************************
+
+11) 
+
+https://www.codingninjas.com/studio/problems/print-fibonacci-series_7421617?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTabValue=SUBMISSION
+
+ Print Fibonacci Series
+
+vector<int> generateFibonacciNumbers(int n) {
+    // Write your code here.
+    if(n==1) return {0};
+    if(n==2) return {0,1};
+    vector<int>ans =generateFibonacciNumbers(n-1);
+    ans.push_back(ans[n-2]+ans[n-3]);
+    return ans;
+}
+
+
+*****************************************************************************************************************************
+
+
+12) 
+https://www.codingninjas.com/studio/problems/print-fibonacci-series_7421617?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTabValue=PROBLEM
+
+Print Fibonacci Series
+
+vector<int> generateFibonacciNumbers(int n) {
+    // Write your code here.
+    if(n==1) return {0};
+    if(n==2) return {0,1};
+    vector<int>ans =generateFibonacciNumbers(n-1);
+    ans.push_back(ans[n-2]+ans[n-3]);
+    return ans;
+}
+
+*****************************************************************************************************************************
+
+
+
+
 
 
 
