@@ -195,5 +195,29 @@ vector<int> rotateArray(vector<int>arr, int k) {
 
 
 *****************************************************************************************************************************
+7)
+https://www.codingninjas.com/studio/problems/ninja-and-the-zero-s_6581958?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTabValue=PROBLEM
+
+Move Zero's to End
+
+brute force 
+
+vector<int> moveZeros(int n, vector<int> a) {
+    // Write your code here.
+    vector<int> temp;
+    for(int i=0;i<a.size();i++){
+        if(a[i]!=0){
+            temp.push_back(a[i]);
+        }
+    }
+    for(int i=0;i<temp.size();i++){
+        a[i]=temp[i];
+    }
+    for(int i=temp.size();i<a.size();i++){
+        a[i]=0;
+    }
+    return a;
+}
+
 
 
