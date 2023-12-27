@@ -60,5 +60,54 @@ vector<int> getSecondOrderElements(int n, vector<int> a) {
 
 *****************************************************************************************************************************
 
-3) 
+3) https://www.codingninjas.com/studio/problems/ninja-and-the-sorted-check_6581957?utm_source=striver&utm_medium=website&utm_campaign=codestudio_a_zcourse&leftPanelTabValue=SUBMISSION
+
+ Check Sorted Array
+
+int isSorted(int n, vector<int> a) {
+    // Write your code here.
+
+    // int a[0];
+    for(int i=0;i<n;i++){
+        if(a[i]>=a[i-1]){
+            // return 1;
+        }
+        else{
+            return 0;
+        }
+    }
+    return 1;
+}
+
+
+*****************************************************************************************************************************
+
+4)https://www.codingninjas.com/studio/problems/remove-duplicates-from-sorted-array_1102307?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_Arrayproblems&leftPanelTabValue=SUBMISSION
+
+ Remove Duplicates from Sorted Array
+
+//using sets
+
+#include<bits/stdc++.h>
+
+int removeDuplicates(vector<int> &arr, int n) {
+	// Write your code here.
+	set<int>st;
+	for(int i=0;i<n;i++){
+		st.insert(arr[i]);
+	}
+	int index=0;
+	for(auto it:st){
+		arr[index]=it;
+		index++;
+	}
+	return index;
+}
+
+
+
+
+*****************************************************************************************************************************
+
+
 
