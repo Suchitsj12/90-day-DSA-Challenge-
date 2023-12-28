@@ -1,0 +1,45 @@
+1) 
+Linear Search
+https://www.codingninjas.com/studio/problems/linear-search_6922070?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_Arrayproblems&leftPanelTabValue=PROBLEM
+
+int linearSearch(int n, int num, vector<int> &arr)
+{
+    // Write your code here.
+    // int m =arr.size();
+    for(int i=0;i<n;i++){
+        if(arr[i]==num) return i;
+        // else return -1;
+    }
+    return -1;
+}
+
+*****************************************************************************************************************************
+
+2)
+ Merge 2 Sorted Array
+
+ https://www.codingninjas.com/studio/problems/sorted-array_6613259?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_Arrayproblems&leftPanelTabValue=PROBLEM
+
+ #include<bits/stdc++.h>
+vector < int > sortedArray(vector < int > a, vector < int > b) {
+    // Write your code here
+    int n1=a.size();
+    int n2=b.size();
+    set<int>st;
+    for(int i=0;i<n1;i++){
+        st.insert(a[i]);
+    }
+    for(int i=0;i<n2;i++){
+        st.insert(b[i]);
+    }
+    vector<int>temp;
+    for(auto it:st){
+        temp.push_back(it);
+    }
+    return temp;
+}
+
+*****************************************************************************************************************************
+
+3) 
+
