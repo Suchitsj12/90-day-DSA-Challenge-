@@ -48,6 +48,23 @@ int missingNumber(vector<int>&a, int n) {
 }
 
 
+//optimizing with xor 
+
+int missingNumber(vector<int>&a, int N) {
+    // Write your code here.
+    int xor_sum=0;
+    for(int i=1;i<=N;i++){
+        xor_sum^=i;
+    }
+    for(int i=0;i<N-1;i++){
+        xor_sum^=a[i];
+    }
+    return xor_sum;
+}
+
+
+//
+
 
 *****************************************************************************************************************************
 
