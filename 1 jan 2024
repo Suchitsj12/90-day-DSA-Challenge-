@@ -34,7 +34,18 @@ int missingNumber(vector<int>&a, int N) {
     return -1;
 }
 
+//by summing method
 
+int missingNumber(vector<int>&a, int n) {
+    // Write your code here.
+    int sum1=n*(n+1)/2;
+    int sum2=0;
+    for(int i=0;i<n-1;i++){
+        sum2+=a[i];
+    }
+    int missing_number=sum1-sum2;
+    return missing_number;
+}
 
 
 
