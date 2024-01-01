@@ -18,6 +18,22 @@ int missingNumber(vector<int>&a, int N) {
     return -1;
 }
 
+// by hashing method 
+
+int missingNumber(vector<int>&a, int N) {
+    // Write your code here.
+    int hash[N+1]={0};
+    for(int i=0;i<N;i++){
+        hash[a[i]]=1;
+    }
+    for(int i=1;i<=N;i++){
+        if(hash[i]==0){
+            return i;
+        }
+    }
+    return -1;
+}
+
 
 
 
