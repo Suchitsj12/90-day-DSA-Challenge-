@@ -130,6 +130,38 @@ public:
     }
 };
 
+hashing method :- use map to store if there is counting of characters
+
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        if(nums.size()==0){
+            return -1;
+        }
+        int maxi=nums[0];
+        int n=nums.size();
+        for(int i=0;i<n;i++){
+            maxi=max(nums[i],maxi);
+        }
+        // int hash[maxi+1]={0};
+        // vector<int> hash(maxi + 1, 0);
+        unordered_map<int, int> hash;
+        for (int i = 0; i < n; i++) {
+            hash[nums[i]]++;
+        }
+
+        // for(int i=0;i<n;i++){
+        //     hash[nums[i]]+=1;
+        // }
+        for(int i=0;i<n;i++){
+            if(hash[nums[i]]==1) return nums[i];
+        }
+        return -1;
+
+    }
+};
+
+
 
 
 
