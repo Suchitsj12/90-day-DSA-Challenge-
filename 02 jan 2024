@@ -2,6 +2,9 @@
 Sort An Array of 0s, 1s and 2s
 https://www.codingninjas.com/studio/problems/sort-an-array-of-0s-1s-and-2s_892977?utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_Arrayproblems&leftPanelTabValue=PROBLEM
 
+
+// by making count of 0,1,2
+
 #include <bits/stdc++.h> 
 void sortArray(vector<int>& arr, int n)
 {
@@ -27,9 +30,44 @@ void sortArray(vector<int>& arr, int n)
     }
     // return num;
 }
+//deutch national bank approach 
 
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {
+        int n=nums.size();
+        int mid=0,low=0,high=n-1;
+        while(mid<=high){
+            if(nums[mid]==0){
+                swap(nums[low],nums[mid]);
+                mid++;
+                low++;
+
+            }
+
+            else if(nums[mid]==1){
+                mid++;
+
+            }
+
+            else{
+            
+                swap(nums[high],nums[mid]);
+                // mid++;/
+                high--;          
+            }
+       }
+        
+    }
+};
 
 *****************************************************************************************************************************
+
+2)
+Majority Element
+https://leetcode.com/problems/majority-element/description/
+
+
 
 
 
