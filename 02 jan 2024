@@ -109,9 +109,47 @@ public:
     }
 };
 
+// by moore's voting method
+
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        int count=0;
+        int element=nums[0];
+        int n=nums.size();
+        //finding the element most no. of time occuring 
+        for(int i=0;i<n;i++){
+            // count=1;
+            if(count==0){
+                count=1;
+                element=nums[i];    
+            }
+            else if (nums[i]==element){
+                count++;
+            }
+            else{
+                count--;
+            }
+        }
+        //no. of times it's occuring 
+        int count1=0;
+        for(int i=0;i<n;i++){
+            if(nums[i]==element) count1++;
+        }
+        //condition if >n/2 or not 
+        if(count1>n/2){
+            return element;
+        }
+        return -1;
+
+        
+    }
+};
 
 
 *****************************************************************************************************************************
+
+
 
 
 
